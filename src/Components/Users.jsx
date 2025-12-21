@@ -16,7 +16,12 @@ const Users = () => {
             },
             body: JSON.stringify(newUser)
         }).then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                alert("user added successfully")
+            }
+        })
     }
 
     return (
