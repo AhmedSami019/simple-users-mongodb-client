@@ -7,6 +7,7 @@ const Users = ({ usersPromise }) => {
   // states
   const [users, setUsers] = useState(initialUsers);
 
+//   to add or post to the database
   const handleAddUser = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -34,7 +35,7 @@ const Users = ({ usersPromise }) => {
       });
   };
 
-  //   to delete user
+  //   to delete user to the database
   const handleDeleteUser = (id) => {
     console.log("delete this user", id);
     fetch(`http://localhost:3002/users/${id}`, {
